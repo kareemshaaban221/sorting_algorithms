@@ -11,8 +11,6 @@ void swap(listint_t *a, listint_t *b)
     listint_t *nxtTmp = b->next;
     listint_t *preTmp = a->prev;
 
-    printf("------------before swap-------------\n");
-    printf("a: [%d]->[%d]->[%d]\nb: [%d]->[%d]->[%d]\n", a->prev ? a->prev->n : -1, a->n, a->next ? a->next->n : -1, b->prev ? b->prev->n : -1, b->n, b->next ? b->next->n : -1);
     if (preTmp)
         preTmp->next = b;
     if (nxtTmp)
@@ -21,8 +19,6 @@ void swap(listint_t *a, listint_t *b)
     a->prev = b;
     b->next = a;
     b->prev = preTmp;
-    printf("------------after swap-------------\n");
-    printf("a: [%d]->[%d]->[%d]\nb: [%d]->[%d]->[%d]\n", a->prev ? a->prev->n : -1, a->n, a->next ? a->next->n : -1, b->prev ? b->prev->n : -1, b->n, b->next ? b->next->n : -1);
 }
 
 /**
