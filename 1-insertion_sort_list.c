@@ -4,6 +4,7 @@
  * swap - a and b
  * @a: the first element
  * @b: the second element
+ * @list: the list of elements
  * Return: void
 */
 void swap(listint_t *a, listint_t *b, listint_t **list)
