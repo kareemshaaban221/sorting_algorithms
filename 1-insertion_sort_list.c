@@ -6,13 +6,15 @@
  * @b: the second element
  * Return: void
 */
-void swap(listint_t *a, listint_t *b)
+void swap(listint_t *a, listint_t *b, listint_t **list)
 {
     listint_t *nxtTmp = b->next;
     listint_t *preTmp = a->prev;
 
     if (preTmp)
         preTmp->next = b;
+    else
+        *list = b;
     if (nxtTmp)
         nxtTmp->prev = a;
     a->next = nxtTmp;
@@ -40,7 +42,7 @@ void insertion_sort_list(listint_t **list)
         j = i;
         while (k && k->n > j->n)
         {
-            swap(k, j);
+            swap(k, j, list);
             if (firstIteration)
             {
                 i = k;
