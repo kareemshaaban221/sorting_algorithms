@@ -64,10 +64,10 @@ size_t p = 0;
 if (l >= h)
 return;
 p = lomuto_partition(array, l, h, size);
-if (p < size - 1)
-quick_sort_recursive(array, p + 1, h, size);
 if (p > 0)
 quick_sort_recursive(array, l, p - 1, size);
+if (p < size - 1)
+quick_sort_recursive(array, p + 1, h, size);
 }
 
 /**
