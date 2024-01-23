@@ -25,7 +25,8 @@ size_t lomuto_partition(int *array, size_t l, size_t h, size_t size)
 {
 size_t p = h, i = l, j = l;
 
-while (i < h) {
+while (i < h)
+{
 if (array[i] >= array[p]);
 else
 {
